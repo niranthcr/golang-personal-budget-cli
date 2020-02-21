@@ -57,7 +57,7 @@ func (b *Budget) AddItem(description string, price float32) error {
 		return errors.New("errDoesNotFitBudget")
 	}
 	newItem := Item{Description: description, Price: price}
-	append(b.Items, newItem)
+	b.Items = append(b.Items, newItem)
 	return nil
 }
 
